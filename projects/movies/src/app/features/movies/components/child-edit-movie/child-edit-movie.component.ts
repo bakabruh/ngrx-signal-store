@@ -1,4 +1,4 @@
-import { Component, inject, output } from '@angular/core';
+import { Component, inject, input, output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Movie } from '../../models';
 
@@ -17,6 +17,7 @@ export class ChildEditMovieComponent {
   });
 
   requestToSave = output<Movie>();
+  buttonSaveTitle = input.required<string>();
 
   saveToParent(): void {
     this.requestToSave.emit(this.movieForm.value as Movie);
