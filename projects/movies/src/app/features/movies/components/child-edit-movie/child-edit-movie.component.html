@@ -1,5 +1,5 @@
-<form [formGroup]="movieForm" (submit)="saveToParent()">
+<form [formGroup]="movieForm" (ngSubmit)="saveToParent()">
     <input type="text" formControlName="title" />
-    text
-    <button></button>
+    <textarea name="description" formControlName="description"></textarea>
+    <button>Create movie</button>
 </form>
