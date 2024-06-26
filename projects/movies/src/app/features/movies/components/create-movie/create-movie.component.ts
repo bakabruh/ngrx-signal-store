@@ -17,6 +17,14 @@ export class CreateMovieComponent {
 
   saveMovie(movie: Movie): void {
     this.store.addOne(movie);
+    this.redirectToList();
+  }
+
+  cancelAndRedirect(): void {
+    this.redirectToList();
+  }
+
+  private redirectToList(): void {
     this.router.navigate(['/movies']);
   }
 }

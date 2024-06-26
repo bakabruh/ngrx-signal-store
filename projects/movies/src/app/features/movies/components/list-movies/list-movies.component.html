@@ -13,5 +13,5 @@
 }
 
 @if(toEditMovie()) {
-    <app-update-movie></app-update-movie>
+    <app-update-movie (requestToCancel)="cancelMovie()"></app-update-movie>
 }

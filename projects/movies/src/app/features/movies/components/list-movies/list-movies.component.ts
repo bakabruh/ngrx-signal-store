@@ -19,4 +19,8 @@ export class ListMoviesComponent {
   editMovie(movie: Movie): void {
     this.toEditMovie.set(movie);
   }
+
+  cancelMovie(): void {
+    this.toEditMovie.set(undefined);
+  }
 }
